@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        section {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            margin: 50px;
+            perspective: 150px;
+            float: left;
+        }
+
+        .group{
+            clear: left;
+        }
+
+        .group>section>div {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .rotate1:hover {
+            transform: rotateX(70deg);
+        }
+        .rotate2:hover {
+            transform: rotateY(70deg);
+        }
+        .rotate3:hover {
+            transform: rotateZ(70deg);
+        }
+
+        .move1:hover{
+            transform: translateX(-50px);
+        }
+        .move2:hover{
+            transform: translateY(-50px);
+        }
+        .move3:hover{
+            transform: translateZ(-50px);
+        }
+
+        .flip1{
+            transform-origin: center;
+        }
+        .flip2{
+            transform-origin: top;
+        }
+        .flip3{
+            transform-origin: bottom;
+        }
+        .flip:hover {
+            transform: rotateX(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="group">
+        <section>
+            <div class="rotate1">X rotation</div>
+        </section>
+        <section>
+            <div class="rotate2">Y rotation</div>
+        </section>
+        <section>
+            <div class="rotate3">Z rotation</div>
+        </section>
+    </div>
+</body>
+
+<div class="group">
+    <section>
+        <div class="move1">X move</div>
+    </section>
+    <section>
+        <div class="move2">Y move</div>
+    </section>
+    <section>
+        <div class="move3">Z move</div>
+    </section>
+</div>
+</body>
+
+<div class="group">
+    <section>
+        <div class="flip flip1">canter</div>
+    </section>
+    <section>
+        <div class="flip flip2">top</div>
+    </section>
+    <section>
+        <div class="flip flip3">bottom</div>
+    </section>
+</div>
+</body>
+
+</html>
